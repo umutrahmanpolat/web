@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usta Detayları</title>
+    <link rel="stylesheet" href="giris.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: orange;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 40px;
+            margin: 30px;
+        }
+        .header h2{
+            margin-right: 40px;
+            background-color: #333;
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .nav {
+            background-color: rgb(43, 43, 43);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            height: 40px;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav ul li {
+            margin: 0 15px;
+            margin-top: 9px;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .nav ul li a:hover {
+            color: orange;
+        }
+
+        .content {
+            margin-top: 140px;
+            padding: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            gap: 20px;
+        }
+
+        .details-container {
+            flex: 2;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .details-container .profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .details-container .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .details-container .profile h2 {
+            font-size: 24px;
+            margin: 0;
+            color: #333;
+        }
+
+        .details-container .details {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .details-container .details span {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .details-container .stars {
+            margin-top: 15px;
+            font-size: 18px;
+            color: orange;
+        }
+
+        .details-container .additional-info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .details-container .additional-info p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .calendar-container {
+            flex: 1;
+            background-color: orange;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .calendar-container h3 {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .calendar-container iframe {
+            width: 100%;
+            height: 350px;
+            border: none;
+            background-color: orange;
+        }
+        .calendar-container button {
+            background-color: rgb(43, 43, 43);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+            margin-top: 20px;
+        }
+
+        .calendar-container button:hover {
+            background-color: #ff5722;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1.30);
+        }
+        
+        .comments-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .comments-container h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .comments-container .comment {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .comments-container .comment h4 {
+            margin: 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .comments-container .comment p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .comments-container .stars {
+            margin-top: 5px;
+            font-size: 14px;
+            color: orange;
+        }
+
+        .footer {
+            background-color: rgb(43, 43, 43);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: orange;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.jpg" alt="Logo">
+        <h1>Zanaatkar</h1>
+        <a href="giris.html"><h2>Giriş Yap</h2></a>
+    </div>
+
+    <div class="nav">
+        <ul>
+            <li><a href="anasayfa.html">Anasayfa</a></li>
+            <li><a href="hakkımızda.html">Hakkımızda</a></li>
+            <li><a href="#">Yardım</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="details-container">
+            <div class="profile">
+                <img src="usta.jpg" alt="Usta Resmi">
+                <h2>Ahmet Yılmaz</h2>
+            </div>
+            <div class="details">
+                <p><span>Meslek:</span> Marangoz</p>
+                <p><span>Deneyim:</span> 10 Yıl</p>
+                <p><span>Telefon:</span> 555-123-4567</p>
+                <p><span>Lokasyon:</span></p>
+                <ul style="margin-left: 20px; color: #555;">
+                    <li>Şehir: İstanbul</li>
+                    <li>Semt: Kadıköy</li>
+                    <li>Mahalle: Moda</li>
+                </ul>
+            </div>
+            <div class="additional-info">
+                <p><span>Kapora Alıyor Mu?:</span> Evet</p>
+                <p><span>İş Yapış Tarzı:</span> Planlı ve düzenli bir şekilde çalışır. Müşteri onayı olmadan iş teslim etmez.</p>
+                <p><span>Hizmet Alanları:</span> Mobilya yapımı, tamir, restorasyon.</p>
+            </div>
+            <div class="stars">
+                Ortalama Yıldız: ★★★★☆
+            </div>
+        </div>
+
+        <div class="calendar-container">
+            <h3>Takvim</h3>
+            <iframe src="https://calendar.google.com/calendar/embed?src=tr.turkish%23holiday%40group.v.calendar.google.com&ctz=Europe%2FIstanbul"></iframe>
+            <button>Randevu Al</button>
+
+        </div>
+    </div>
+
+    <div class="comments-container">
+        <h3>Müşteri Yorumları</h3>
+        <div class="comment">
+            <h4>Mehmet Demir</h4>
+            <p>Ahmet Bey işinde çok titiz ve hızlı. Mobilyalarımı tam zamanında teslim etti!</p>
+            <div class="stars">Yıldız: ★★★★★</div>
+        </div>
+        <div class="comment">
+            <h4>Ayşe Kaya</h4>
+            <p>Gerçekten harika bir marangoz. Tüm işlerimizi eksiksiz tamamladı.</p>
+            <div class="stars">Yıldız: ★★★★☆</div>
+        </div>
+        <div class="comment">
+            <h4>Selim Çelik</h4>
+            <p>Kaliteli malzeme ve profesyonel hizmet. Tavsiye ederim!</p>
+            <div class="stars">Yıldız: ★★★★★</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Zanaatkar. Tüm hakları saklıdır. | <a href="#">Gizlilik</a> | <a href="#">Şartlar</a></p>
+    </div>
+</body>
+</html>

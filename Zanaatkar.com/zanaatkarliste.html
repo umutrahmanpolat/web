@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usta Bilgileri</title>
+    <link rel="stylesheet" href="giris.css">
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        
+        .header {
+    background-color: orange;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+}
+
+.header h1 {
+    font-size: 40px;
+    margin: 30px;
+}
+.header h2{
+            margin-right: 40px;
+            background-color: #333;
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+.header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav {
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    height: 40px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    margin: 0 15px;
+    margin-top: 9px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: orange;
+}
+
+        .content {
+            margin-top: 140px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .ara {
+            text-align: center; 
+            
+        }
+
+        .ara input {
+            width: 50%;
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 100px;
+            margin-bottom: 150px;
+           
+            
+        }
+
+        .ara button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .ara button:hover {
+            background-color: darkorange;
+        }
+        .card {
+            background-color: hsl(0, 0%, 100%);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .card .details {
+            font-size: 14px;
+            color: #777;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        .card .details span {
+            display: block;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 14px;
+            color: white;
+            background-color: orange;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: darkorange;
+        }
+        .footer {
+            background-color: rgb(43, 43, 43);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: orange;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+   
+
+    <div class="header">
+        <img src="logo.jpg" alt="Logo">
+        <h1>Zanaatkar</h1>
+        <a href="giris.html"><h2>Giriş Yap</h2></a>
+    </div>
+ 
+   
+
+    
+    <div class="nav">
+        <ul>
+            <li><a href="anasayfa.html">Anasayfa</a></li>
+            <li><a href="hakkımızda.html">Hakkımızda</a></li>
+            <li><a href="#">Yardım</a></li>
+        </ul>
+</div>
+    
+<form class="ara" style="margin-top: 100px; margin-bottom: 100px;"> 
+    <input type="search" id="query" name="a" placeholder="Hangi hizmeti arıyorsunuz?">
+    <button type="submit" style="height: 60px; background-color: orange;">Ara</button>
+         </form>
+    <div class="content">
+        <!-- Kutular -->
+        <div class="card">
+            <img src="usta1.jpg" alt="Usta Resmi">
+            <h3>Ahmet Yılmaz</h3>
+            <p>Mermerci</p>
+            <div class="details">
+                <span>Deneyim: 10 Yıl</span>
+                <span>Telefon: 555-123-4567</span>
+                <span>Lokasyon: İstanbul</span>
+            </div>
+            <a href="zanaatkardetay.html" class="button">Detayları Gör</a>
+        </div>
+        <div class="card">
+            <img src="usta2.png" alt="Usta Resmi">
+            <h3>Ali Veli</h3>
+            <p>Mermerci</p>
+            <div class="details">
+                <span>Deneyim: 10 Yıl</span>
+                <span>Telefon: 555-123-4567</span>
+                <span>Lokasyon: İstanbul</span>
+            </div>
+            <a href="zanaatkardetay.html" class="button">Detayları Gör</a>
+        </div>
+        <div class="card">
+            <img src="usta3.jpg" alt="Usta Resmi">
+            <h3>Hasan Hüseyin</h3>
+            <p>Mermerci</p>
+            <div class="details">
+                <span>Deneyim: 10 Yıl</span>
+                <span>Telefon: 555-123-4567</span>
+                <span>Lokasyon: İstanbul</span>
+            </div>
+            <a href="zanaatkardetay.html" class="button">Detayları Gör</a>
+        </div>
+
+        <div class="card">
+            <img src="usta4.jpg" alt="Usta Resmi">
+            <h3>Burak Tosun</h3>
+            <p>Mermerci</p>
+            <div class="details">
+                <span>Deneyim: 10 Yıl</span>
+                <span>Telefon: 555-123-4567</span>
+                <span>Lokasyon: İstanbul</span>
+            </div>
+            <a href="zanaatkardetay.html" class="button">Detayları Gör</a>
+        </div>
+        <div class="card">
+            <img src="usta5.jpg" alt="Usta Resmi">
+            <h3>Resul Polat</h3>
+            <p>Mermerci</p>
+            <div class="details">
+                <span>Deneyim: 10 Yıl</span>
+                <span>Telefon: 555-123-4567</span>
+                <span>Lokasyon: İstanbul</span>
+            </div>
+            <a href="zanaatkardetay.html" class="button">Detayları Gör</a>
+        </div>
+        <div class="card">
+            <img src="usta3.jpg" alt="Usta Resmi">
+            <h3>Selim Tunç</h3>
+            <p>Mermerci</p>
+            <div class="details">
+                <span>Deneyim: 10 Yıl</span>
+                <span>Telefon: 555-123-4567</span>
+                <span>Lokasyon: İstanbul</span>
+            </div>
+            <a href="zanaatkardetay.html" class="button">Detayları Gör</a>
+        </div>
+        <div class="card">
+            <img src="usta5.jpg" alt="Usta Resmi">
+            <h3>Serhat Türkmen </h3>
+            <p>Mermerci</p>
+            <div class="details">
+                <span>Deneyim: 10 Yıl</span>
+                <span>Telefon: 555-123-4567</span>
+                <span>Lokasyon: İstanbul</span>
+            </div>
+            <a href="zanaatkardetay.html" class="button">Detayları Gör</a>
+        </div>
+        <div class="card">
+            <img src="usta3.jpg" alt="Usta Resmi">
+            <h3>Engin Kılıç</h3>
+            <p>Mermerci</p>
+            <div class="details">
+                <span>Deneyim: 10 Yıl</span>
+                <span>Telefon: 555-123-4567</span>
+                <span>Lokasyon: İstanbul</span>
+            </div>
+            <a href="zanaatkardetay.html" class="button">Detayları Gör</a>
+        </div>
+        <div class="card">
+            <img src="usta1.jpg" alt="Usta Resmi">
+            <h3>Semih Kılıçsoy</h3>
+            <p>Mermerci</p>
+            <div class="details">
+                <span>Deneyim: 10 Yıl</span>
+                <span>Telefon: 555-123-4567</span>
+                <span>Lokasyon: İstanbul</span>
+            </div>
+            <a href="zanaatkardetay.html" class="button">Detayları Gör</a>
+        </div>
+        <div class="card">
+            <img src="usta2.png" alt="Usta Resmi">
+            <h3>Sergen Yalçın</h3>
+            <p>Mermerci</p>
+            <div class="details">
+                <span>Deneyim: 10 Yıl</span>
+                <span>Telefon: 555-123-4567</span>
+                <span>Lokasyon: İstanbul</span>
+            </div>
+            <a href="zanaatkardetay.html" class="button">Detayları Gör</a>
+        </div>
+        <div class="card">
+            <img src="usta5.jpg" alt="Usta Resmi">
+            <h3>Şifo Mehmet</h3>
+            <p>Mermerci</p>
+            <div class="details">
+                <span>Deneyim: 10 Yıl</span>
+                <span>Telefon: 555-123-4567</span>
+                <span>Lokasyon: İstanbul</span>
+            </div>
+            <a href="zanaatkardetay.html" class="button">Detayları Gör</a>
+        </div>
+        <div class="card">
+            <img src="usta3.jpg" alt="Usta Resmi">
+            <h3>Arif Kuran</h3>
+            <p>Mermerci</p>
+            <div class="details">
+                <span>Deneyim: 7 Yıl</span>
+                <span>Telefon: 555-987-6543</span>
+                <span>Lokasyon: Ankara</span>
+            </div>
+            <a href="zanaatkardetay.html" class="button">Detayları Gör</a>
+        </div>
+
+        
+    
+    </div>
+    <div class="footer">
+        <div class="footer-sections">
+            <div>
+                <h3 style="color: orange;">İLETİŞİM</h3>
+                <h3>Bize Ulaşın ve Sorularınıza Yanıt Bulun!</h3>
+                <p>Telefon: +90 123 456 78 90</p>
+                <p>E-posta: klu@edu.com</p>
+            </div>
+            <div>
+                <h3 style="color: orange;">SORULAR</h3>
+                <p>Sıkça Sorulan Sorular</p>
+                <p>Yardım Merkezi</p>
+            </div>
+            <div>
+                <h3 style="color: orange;">ADRES</h3>
+                <p>Adres: Kırklareli Mahallesi, 39000 Kırklareli</p>
+            </div>
+            <div>
+                <h3 style="color: orange;">ŞİKAYET</h3>
+                <p>Geri Bildirim</p>
+                <p>Şikayet Formu</p>
+            </div>
+        </div>
+        
+        <p class="footer-copy">© 2024 Örnek Web Sitesi. Tüm hakları saklıdır.</p>
+    </div>
+   
+</body>
+</html>
